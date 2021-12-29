@@ -4,7 +4,8 @@ import './App.css';
 import Login from './Component/Login';
 import Register from './Component/Register';
 import User from './Component/User';
-
+import Hotel from './Component/hotel';
+import Detail from './Component/Detail';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route  path="/register"> <Register/>
         </Route>
+        <Route  path="/detail"> <Detail/>
+        </Route>
+       
       </Switch>
  
     </div>

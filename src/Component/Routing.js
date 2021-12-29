@@ -7,7 +7,7 @@ import {
 import { UserContext } from "../Context/UserProvider";
   import Login from './login'
   import Register from './Register'
-
+import Detail from "./Detail";
   function Routing(){
     // let { isLogin } = useContext(UserContext);
       return(
@@ -17,6 +17,7 @@ import { UserContext } from "../Context/UserProvider";
          <Register/>
         </Route>
          <Route path="/login"><Login/></Route> 
+         <Route path="/detail"><Detail/> </Route> 
     </Switch>
       )
   }
