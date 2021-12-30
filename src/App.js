@@ -8,13 +8,15 @@ import Object from "./components/Object";
 import ListWisata from "./components/ListWisata";
 import Navbar from "./components/Navbar";
 import Store from "./components/Store";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <div>
-        <img
+        {/* <img
           style={{
             borderRadius: "10px",
             display: "block",
@@ -25,11 +27,13 @@ function App() {
           src="https://www.goodnewsfromindonesia.id/uploads/post/large-shutterstock-1482770729-acbd72dfa8c68fe8d3ccf8eac99e007e.jpg"
           width={650}
           height={400}
-        />
-        <Object />
+        /> */}
+        {/* <Object />
         <ListWisata /><br/>
         <Store />
-        <Footer />
+        <Footer /> */}
+        {/* <Login />
+        <Register /> */}
       </div>
       <Switch>
         <Route exact path="/"></Route>
@@ -38,6 +42,12 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
         <Route path="/contact">
           <Contact />
