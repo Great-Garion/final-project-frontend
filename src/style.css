@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lily+Script+One&family=Lobster&family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=IBM+Plex+Sans&family=Lily+Script+One&family=Lobster&family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=IBM+Plex+Sans&family=Lily+Script+One&family=Lobster&family=Montserrat:ital@1&family=Pushster&display=swap');
+.halHome{
+    color: yellowgreen;
+    text-decoration: none;
+    font-family: "Lily Script One", sans-serif;
+
+}
+
+.halBout{
+    color: yellowgreen;
+    text-decoration: none;
+    font-family: "Lily Script One", sans-serif;
+
+}
+
+.halContact{
+    color: yellowgreen;
+    text-decoration: none;
+    font-family: "Lily Script One", sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: green
+}
+
+.masuk{
+    font-family: "Lily Script One", sans-serif;
+    font-size: 15px;
+    color:honeydew;
+    margin-left: 50px;
+    padding: 9px 25px;
+    background-color: green;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.masuk:hover{
+    background-color:orange;
+}
+
+.btnName{
+    font-family: "Courgette";
+    background-color:orange ;
+    border: none;
+    margin-left: 30px;
+    padding: 9px 25px;
+    border-radius: 10px;
+
+}
+
+.judul{
+    font-family: "Pushster";
+}
+
+.cardWisata{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+
+}
