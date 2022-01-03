@@ -1,0 +1,67 @@
+.review-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-input {
+    display: flex;
+    margin-left: 50px;
+  }
+  
+  .input-review {
+    height: 100px;
+    width: 700px;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    text-indent: 10px;
+  }
+  
+  .bintang {
+    margin-left: 20px;
+    margin-top: -9px;
+  }
+  
+  .main-review {
+    height: 700px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  
+  .user-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .foto1 {
+    height: 70px;
+    width: 70px;
+  }
+  
+  .nama-user {
+    margin-left: 20px;
+    font-weight: bolder;
+    margin-top: -6px;
+  }
+  
+  .user-review {
+    margin-left: 20px;
+    margin-top: -10px;
+  }
+  
+  .form-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .headline {
+    margin-top: 20px;
+    height: 30px;
+    margin-left: 20px;
+  }
+  
+  .btn-review {
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  
