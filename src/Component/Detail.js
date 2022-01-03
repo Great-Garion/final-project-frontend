@@ -1,23 +1,19 @@
 import React from "react";
 
 import {
- 
   Col,
   Row,
   DropdownButton,
   Dropdown,
   Carousel,
-  CarouselItem,
-  CarouselCaption,Button, Container,
-   Card
+  Button,
+  Container,
+  Card,
 } from "react-bootstrap";
 
 import { Link } from "react-router-dom";
-import Hotel from "./hotel";
-import Restoran from "./restoran";
+
 import Review from "./Review";
-import Store from "./store";
-import Trasport from "./trasport";
 
 function Detail() {
   return (
@@ -26,7 +22,6 @@ function Detail() {
         <Container
           style={{
             marginTop: "2rem",
-
             height: "70%",
             display: "grid",
             justifyContent: "center",
@@ -152,230 +147,230 @@ function Detail() {
             <Col style={{ display: "flex" }}>
               {/* <Hotel /> */}
               <div>
-      <div style={{ width: "29rem" }}>
-        <Carousel>
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>Hotel name</h4>
-                  <p>Alamat Hotel</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
+                <div style={{ width: "29rem" }}>
+                  <Carousel>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>Hotel name</h4>
+                            <p>Alamat Hotel</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
 
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>Hotel name</h4>
-                  <p>Alamat Hotel</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>Hotel name</h4>
-                  <p>Alamat Hotel</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
-        </Carousel>
-      </div>
-    </div>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>Hotel name</h4>
+                            <p>Alamat Hotel</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>Hotel name</h4>
+                            <p>Alamat Hotel</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              </div>
               {/* <Store /> */}
               <div>
-      <div style={{ width: "29rem" }}>
-        <Carousel>
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>store name</h4>
-                  <p>Alamat store</p>
-                  <p>pasilitas store</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
+                <div style={{ width: "29rem" }}>
+                  <Carousel>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>store name</h4>
+                            <p>Alamat store</p>
+                            <p>pasilitas store</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
 
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>store name</h4>
-                  <p>Alamat Hotel</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>store name</h4>
-                  <p>Alamat Hotel</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
-        </Carousel>
-      </div>
-    </div>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>store name</h4>
+                            <p>Alamat Hotel</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>store name</h4>
+                            <p>Alamat Hotel</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              </div>
 
               {/* <Trasport /> */}
 
               <div>
-      <div style={{ width: "29rem" }}>
-        <Carousel>
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>store name</h4>
-                  <p>Alamat store</p>
-                  <p>pasilitas store</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
+                <div style={{ width: "29rem" }}>
+                  <Carousel>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>store name</h4>
+                            <p>Alamat store</p>
+                            <p>pasilitas store</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
 
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>Hotel name</h4>
-                  <p>Alamat Hotel</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>trasport name</h4>
-                  <p>Alamat Hotel</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
-        </Carousel>
-      </div>
-    </div>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>Hotel name</h4>
+                            <p>Alamat Hotel</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>trasport name</h4>
+                            <p>Alamat Hotel</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              </div>
               {/* <Restoran /> */}
               <div>
-      <div style={{ width: "29rem" }}>
-        <Carousel>
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>Hotel name</h4>
-                  <p>Alamat Hotel</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
+                <div style={{ width: "29rem" }}>
+                  <Carousel>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>Hotel name</h4>
+                            <p>Alamat Hotel</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
 
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>restoran name</h4>
-                  <p>Alamat restoran</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Container border="light">
-              <Row xs={1} md={1} lg={1}>
-                <Col style={{ width: "10rem" }}>
-                  <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
-                </Col>
-                <Col style={{ width: "10rem" }}>
-                  <h4>Hotel name</h4>
-                  <p>Alamat Hotel</p>
-                  <p>pasilitas Hotel</p>
-                  <p>harga Hotel</p>
-                  <Button>booking</Button>
-                </Col>
-              </Row>
-            </Container>
-          </Carousel.Item>
-        </Carousel>
-      </div>
-    </div>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>restoran name</h4>
+                            <p>Alamat restoran</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <Container border="light">
+                        <Row xs={1} md={1} lg={1}>
+                          <Col style={{ width: "10rem" }}>
+                            <Card.Img src="https://images.solopos.com/2019/11/Ilustrasi-hotel.-Freepik.jpg" />
+                          </Col>
+                          <Col style={{ width: "10rem" }}>
+                            <h4>Hotel name</h4>
+                            <p>Alamat Hotel</p>
+                            <p>pasilitas Hotel</p>
+                            <p>harga Hotel</p>
+                            <Button>booking</Button>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              </div>
             </Col>
           </Row>
           <Review />

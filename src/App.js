@@ -1,29 +1,32 @@
+import { Route, Switch } from "react-router-dom";
+import "./App.css";
+import Login from "./Component/Login";
+import Register from "./Component/Register";
+import User from "./Component/User";
 
-import { Route, Switch } from 'react-router-dom';
-import './App.css';
-import Login from './Component/Login';
-import Register from './Component/Register';
-import User from './Component/User';
-import Hotel from './Component/hotel';
-import Detail from './Component/Detail';
+import Detail from "./Component/Detail";
 
 function App() {
   return (
-    <div >
-
-     
+    <div>
       <Switch>
-        <Route exact path="/"> <User/>
+        <Route exact path="/">
+          {" "}
+          <User />
         </Route>
-        <Route  path="/login"> <Login/>
+        <Route path="/login">
+          {" "}
+          <Login />
         </Route>
-        <Route  path="/register"> <Register/>
+        <Route path="/register">
+          {" "}
+          <Register />
         </Route>
-        <Route  path="/detail"> <Detail/>
+        <Route path="/detail">
+          {" "}
+          <Detail />
         </Route>
-       
       </Switch>
- 
     </div>
   );
 }
