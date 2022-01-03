@@ -1,19 +1,27 @@
-import { createContext, useEffect, useState } from "react"
-export let UserContext = createContext()
-function UserProvider (props){
-    let [isReg, setIsReg] = useState(false)
-    let [isLogin,setIsLogin] = useState(false)
+import { createContext, useEffect, useState } from "react";
+import Cookies from "js-cookie";
+export let UserContext = createContext();
 
-    useEffect(() => {
-        let dataLogin = localStorage.getItem("isLogin")
-        let persData = JSON.parse(dataLogin)
-        setIsLogin(persData)
-    }, [])
-    return(
-        <UserContext.Provider value = {{isLogin, setIsLogin, isReg, setIsReg}}>
-        {props.children}
+function UserProvider(props) {
+  let [isReg, setIsReg] = useState(false);
+  let [isLogin, setIsLogin] = useState(false);
+
+  useEffect(async () => {
+    const token = Cookies.get("lokaKota");
+    if (token) {
+      setIsLogin(true);
+    //   const result = await axios.get("https://lokakota.herokuapp.com/user", {
+    //     headers: { Authorization: `Bearer${token}` },
+    //   });
+    //   console.log(result);
+    }
+    console.log(token);
+  }, []);
+  return (
+    <UserContext.Provider value={{ isLogin, setIsLogin, isReg, setIsReg }}>
+      {props.children}
     </UserContext.Provider>
-    )
+  );
 }
 
-export default UserProvider
+export default UserProvider;
