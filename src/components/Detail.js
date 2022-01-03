@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 import {
   Col,
@@ -11,11 +12,19 @@ import {
   Card,
 } from "react-bootstrap";
 
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import Review from "./Review";
 
 function Detail() {
+  const [dataDetail, setDataDetail] = useState({})
+  const {id} = useParams()
+
+  useEffect(() => {
+    axios(`https://lokakota.herokuapp.com/wisata/${id}`).then((result) => {
+      setDataDetail(result.data)
+    })
+  })
   return (
     <div style={{ height: "100%" }}>
       <div>

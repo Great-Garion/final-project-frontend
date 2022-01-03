@@ -1,15 +1,17 @@
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import { useHistory } from "react-router";
+import axios from "axios";
 
 import { UserContext } from "../Context/UserProvider";
 import "./login.css";
+import Cookies from "js-cookie";
 
 function Register() {
   let history = useHistory();
   let { isReg, setIsReg } = useContext(UserContext);
   let [user, setUser] = useState({
+    fullname: "",
     username: "",
     email: "",
     password: "",
@@ -25,33 +27,37 @@ function Register() {
     }));
   };
 
-  const submitData = () => {};
+  const submitData = async () => {
+    const result = await axios.post(
+      "https://lokakota.herokuapp.com/auth/regis",
+      user
+    );
+    console.log(result);
+    history.push("/login");
+  };
 
   const handleChangebutton = (e) => {
     e.preventDefault();
-    console.log(user);
     submitData();
   };
 
   return (
     <div>
-      <div className="login-box">
+      <div className="login-box" style={{marginTop: "50px"}}>
         <h2>Register</h2>
         <form>
           <div className="user-box">
             <input
-              type="email"
-              placeholder="Email "
-              value={user.email}
-              name="email"
+              type="text"
+              value={user.fullname}
+              name="fullname"
               onChange={handleChangeRegister}
             />
-            <label>Email</label>
+            <label>Fullname</label>
           </div>
           <div className="user-box">
             <input
               type="text"
-              placeholder="Username"
               value={user.username}
               name="username"
               onChange={handleChangeRegister}
@@ -60,23 +66,31 @@ function Register() {
           </div>
           <div className="user-box">
             <input
+              type="email"
+              value={user.email}
+              name="email"
+              onChange={handleChangeRegister}
+            />
+            <label>Email</label>
+          </div>
+          <div className="user-box">
+            <input
               type="password"
               value={user.password}
               name="password"
               onChange={handleChangeRegister}
-              placeholder="Password"
             />
             <label>Password</label>
           </div>
-          <h6 style={{ color: " #03e9f4" }}>
+          <h6 style={{ color: "white" }}>
             {" "}
             Have Account ?{" "}
-            <Link to="/login" style={{ textDecoration: "none", color: "snow" }}>
+            <Link to="/login" style={{ textDecoration: "none", color: "green" }}>
               Login
             </Link>{" "}
           </h6>
-          <button
-            style={{ backgroundColor: "grey", border: "none" }}
+          <button className="bbtnMasuk"
+            style={{ border: "none" }}
             onClick={handleChangebutton}
           >
             Register
