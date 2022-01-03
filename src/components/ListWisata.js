@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import "../style.css"
 function ListWisata() {
+  const history = useHistory()
   const [listWisata, setListWisata] = useState([]);
 
   useEffect(() => {
@@ -11,6 +13,12 @@ function ListWisata() {
       setListWisata(result.data);
     });
   }, []);
+
+  const handleDetail = (id) => {
+    history.push(`/wisata/${id}`)
+  }
+
+
   return (
     <div className="boxWisata">
       <Container>
@@ -33,7 +41,7 @@ function ListWisata() {
                   alt="wisata"
                 />
                 <Card.Body>
-                  <button className="btnName">{item.tourism_spot}</button>
+                  <button className="btnName" onClick={() => handleDetail(item._id)}>{item.tourism_spot}</button>
                 </Card.Body>
               </Card>
             </Col>

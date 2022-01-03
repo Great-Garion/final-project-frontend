@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ListWisata from "./components/ListWisata";
+import Detail from "./components/Detail";
 
 function App() {
   return (
@@ -39,14 +40,18 @@ function App() {
           <Contact />
           <Footer/>
         </Route>
-        <Route path="/listWisata">
+        <Route exact path="/wisata">
           <ListWisata />
+        </Route>
+        <Route path="/wisata/:id">
+          <Detail/>
         </Route>
         <Route path="/:alihan">
           <Alihan />
         </Route>
       </Switch>
     </Router>
+
   );
 }
 

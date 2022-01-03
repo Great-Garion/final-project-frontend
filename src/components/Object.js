@@ -7,7 +7,7 @@ function Object() {
 
   const handleObject = (e) => {
     e.preventDefault()
-    history.push("/listWisata")
+    history.push("/wisata")
   }
   return (
     <div className="boxWisata">
