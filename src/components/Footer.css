@@ -1,33 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .container{
-	margin:1px;
+	margin:auto;
 }
 .row{
 	display: flex;
 	flex-wrap: wrap;
 }
-ul{
-	list-style: none;
-	padding: 0;
-}
+
 footer{
 	background-color: #ffb8a2;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 col{
    width: 25%;
-   padding: 0 15px;
+   padding: 0px 15px;
 }
-h4{
+
+.judulFooter{
 	font-size: 18px;
 	font-family: "Poppins";
 	color: rgb(55, 208, 255);
-	margin-bottom: 35px;
+	text-transform: capitalize;
+	margin-bottom: 30px;
 	font-weight: 500;
 	position: relative;
 }
-
+h6{
+	font-family: "Lobster";
+}
 h4::before{
 	content: '';
 	position: absolute;
@@ -39,9 +41,11 @@ h4::before{
 	width: 50px;
 }
 
-ul li:not(:last-child){
+li{
 	margin-bottom: 10px;
+	list-style: none;
 }
+
 li a{
 	font-size: 16px;
 	text-align: left;

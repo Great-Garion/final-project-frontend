@@ -1,9 +1,16 @@
+import { useHistory } from "react-router";
 import { Card, Row, Col, Container, Button } from "react-bootstrap";
 import "../style.css";
 
 function Object() {
+  const history = useHistory()
+
+  const handleObject = (e) => {
+    e.preventDefault()
+    history.push("/listWisata")
+  }
   return (
-    <div>
+    <div className="boxWisata">
       <Container>
         <Row style={{ marginTop: "20px" }} xs={1} md={2} className="g-4">
           <Col>
@@ -11,7 +18,6 @@ function Object() {
               className="cardWisata"
               style={{
                 borderRadius: "30px 30px 30px 30px",
-                // width: "450px",
                 paddingBottom: "10px",
               }}
             >
@@ -28,7 +34,7 @@ function Object() {
                   and scrambled it to make a type specimen book.
                 </Card.Text>
               </Card.Body>
-              <Button
+              <Button onClick={handleObject}
                 style={{
                   backgroundColor: "orange",
                   border: "none",
@@ -46,7 +52,6 @@ function Object() {
               className="cardWisata"
               style={{
                 borderRadius: "30px 30px 30px 30px",
-                // width: "450px",
                 paddingBottom: "10px",
               }}
             >
@@ -63,7 +68,7 @@ function Object() {
                   and scrambled it to make a type specimen book.
                 </Card.Text>
               </Card.Body>
-              <Button
+              <Button onClick={handleObject}
                 style={{
                   backgroundColor: "orange",
                   border: "none",

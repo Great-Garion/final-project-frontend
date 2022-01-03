@@ -13,17 +13,17 @@ function Navbar() {
             <nav className="navMenu">
               <ul className="nav__links">
                 <li>
-                  <Link to="/home" className="halHome fs-4">
+                  <Link to="/home" className="nav-btn fs-4">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about" className="halBout fs-4">
+                  <Link to="/about" className="nav-btn fs-4">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="halContact fs-4">
+                  <Link to="/contact" className="nav-btn fs-4">
                     Contact
                   </Link>
                 </li>

@@ -20,7 +20,7 @@ function Footer() {
               style={{ width: "130px", height: "70px" }}
               alt="logo"
             />
-            <h6>find new tourist spots here and visit with your loved ones</h6>
+            <h6>Find new tourist spots here and visit with your loved ones</h6>
             <div className="sosmed">
               <Link to="/">
                 <FaFacebookF />
@@ -37,8 +37,7 @@ function Footer() {
             </div>
           </div>
           <Col>
-            <h4>Company</h4>
-            <ul>
+            <h4 className="judulFooter">Company</h4>
               <li>
                 <Link to="/">About Us</Link>
               </li>
@@ -51,35 +50,30 @@ function Footer() {
               <li>
                 <Link to="/">Privacy Police</Link>
               </li>
-            </ul>
           </Col>
           <Col>
-            <h4>Tour</h4>
-            <ul>
+            <h4 className="judulFooter">Tour</h4>
               <li>
                 <Link to="/">Sumbawa</Link>
               </li>
               <li>
                 <Link to="/">Sumbawa Barat</Link>
               </li>
-            </ul>
           </Col>
           <Col>
-            <h4>Referensi</h4>
-            <ul>
+            <h4 className="judulFooter">Reference</h4>
               <li>
-                <Link to="/">Tempat Wisata</Link>
+                <Link to="/">Tourism resort</Link>
               </li>
               <li>
-                <Link to="/">Hotek & Penginapan</Link>
+                <Link to="/">Hotel & Lodging</Link>
               </li>
               <li>
-                <Link to="/">Kuliner</Link>
+                <Link to="/">Culinary</Link>
               </li>
               <li>
-                <Link to="/">Belanja</Link>
+                <Link to="/">Gallery</Link>
               </li>
-            </ul>
           </Col>
         </Row>
       </Container>
