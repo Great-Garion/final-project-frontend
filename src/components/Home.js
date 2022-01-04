@@ -16,6 +16,7 @@ function Home() {
         height={400}
       />
       <Object />
+      
     </div>
   );
 }

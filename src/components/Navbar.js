@@ -1,9 +1,23 @@
 import Logo from "../Logo.png";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "../style.css";
+import{UserContext} from '../Context/UserProvider'
+import {useContext} from 'react'
 
 function Navbar() {
+  const history =  useHistory()
+
+  let {isLogin, setIsLogin}=useContext(UserContext)
+  
+  function logOut(){
+    if(isLogin){
+      setIsLogin(false)
+    }else{
+      history.push('/login')
+    }
+
+}
   return (
     <div>
       <Container>
@@ -29,7 +43,12 @@ function Navbar() {
                 </li>
               </ul>
             </nav>
-            <button className="masuk">Login</button>
+            <button className="masuk"
+            onClick={logOut}
+            >
+             {isLogin ? " LogOut" : " Login"}
+              
+              </button>
           </header>
         </div>
       </Container>
