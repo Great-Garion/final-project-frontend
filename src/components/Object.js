@@ -3,12 +3,13 @@ import { Card, Row, Col, Container, Button } from "react-bootstrap";
 import "../style.css";
 
 function Object() {
-  const history = useHistory()
+  const history = useHistory();
 
-  const handleObject = (e) => {
-    e.preventDefault()
-    history.push("/wisata")
-  }
+  // const handleObject = (e) => {
+  //   e.preventDefault();
+  //   history.push("/wisata?kabupaten=Sumbawa");
+  // };
+
   return (
     <div className="boxWisata">
       <Container>
@@ -34,7 +35,8 @@ function Object() {
                   and scrambled it to make a type specimen book.
                 </Card.Text>
               </Card.Body>
-              <Button onClick={handleObject}
+              <Button
+                onClick={() => history.push("/wisata?kabupaten=Sumbawa")}
                 style={{
                   backgroundColor: "orange",
                   border: "none",
@@ -68,14 +70,15 @@ function Object() {
                   and scrambled it to make a type specimen book.
                 </Card.Text>
               </Card.Body>
-              <Button onClick={handleObject}
+              <Button
+                onClick={() => history.push("/wisata?kabupaten=Sumbawa+Barat")}
                 style={{
                   backgroundColor: "orange",
                   border: "none",
                   borderRadius: "20px",
                   width: "150px",
                   marginLeft: "200px",
-                }} 
+                }}
               >
                 click here
               </Button>
