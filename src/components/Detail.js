@@ -27,8 +27,11 @@ import {
 
 import Review from "./Review";
 import "./Detail.css";
+import { UserContext } from "../Context/UserProvider";
+import { useContext } from "react";
 
 function Detail() {
+  const { isLogin } = useContext(UserContext);
   const [dataDetail, setDataDetail] = useState({});
   const { id } = useParams();
 
@@ -36,8 +39,7 @@ function Detail() {
     axios(`https://lokakota.herokuapp.com/wisata/${id}`).then((result) => {
       setDataDetail(result.data);
     });
-  });
-  console.log(dataDetail);
+  }, []);
 
   return (
     <div style={{ height: "100%" }}>
@@ -268,8 +270,8 @@ function Detail() {
               </Row>
             </Col>
           </Row>
-          <Review />
         </Container>
+        {isLogin ? <Review/> : console.log("silahkan login")}
       </div>
     </div>
   );

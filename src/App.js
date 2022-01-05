@@ -12,6 +12,7 @@ import Detail from "./components/Detail";
 import { useContext } from "react";
 import { UserContext } from "./Context/UserProvider";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import Review from "./components/Review";
 
 function App() {
   let {isLogin} = useContext(UserContext)
@@ -23,12 +24,15 @@ function App() {
 
       <Switch>
         <Route exact path="/">
-          
           <Home />
           <Footer/>
         </Route>
         <Route path="/about">
           <About />
+          <Footer/>
+        </Route>
+        <Route path="/home">
+          <Home />
           <Footer/>
         </Route>
         <Route path="/login">
@@ -47,7 +51,9 @@ function App() {
         </Route>
         <Route path="/wisata/:id">
            <Detail/> 
-         
+        </Route>
+        <Route path="/detail/:id">
+           <Review/> 
         </Route>
         <Route path="/:alihan">
           <Alihan />
