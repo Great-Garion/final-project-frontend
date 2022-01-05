@@ -12,7 +12,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
 
 function Review() {
-  const [star, setStar] = useState();
   const [deskripsi, setDeskripsi] = useState([]);
   const { id } = useParams();
 
@@ -27,24 +26,26 @@ function Review() {
     });
   }, []);
 
-  const [input, setInput] = useState("");
-  // const ratingChange = (newRating) => {
-  //   setStar(newRating);
-  // };
-  const addData = () => {
-    setDeskripsi([...deskripsi, input]);
+  const [input, setInput] = useState({
+    rating: 0,
+    review: "",
+  });
+
+  const addData = (e) => {
+    const { name, value } = e.target;
+    setInput({ ...input, [name]: value });
+  };
+  
+  const handleRating = (rating) => {
+    console.log(`rating : ${rating}`)
+    setInput({...input, rating})
+  }
+
+  const handleReview = (e) => {
+    e.preventDefault();
+    console.log(input);
   };
 
-  const submidReview = (e) => {
-    e.preventDefault();
-    if (star === null && deskripsi === "") {
-      alert("masukkan review");
-    } else {
-    }
-  };
-  // for(i = 0; i < 5; i++){
-  //   if(i <= )
-  // }
   return (
     <div className="review-container">
       <div className="main-input">
@@ -69,12 +70,12 @@ function Review() {
                           </li>
                           <li style={{ marginLeft: "50px" }}>
                             <ReactStars
-                              classNames="bintang"
+                              className="rating"
                               size={30}
                               activeColor="red"
                               count={5}
-                              // onChange={addData}
-                              // value={star}
+                              onChange={handleRating}
+                              value={input.rating}
                             />
                           </li>
                         </ul>
@@ -83,12 +84,12 @@ function Review() {
                         className="input-review"
                         type="textarea"
                         placeholder="review"
-                        // value={deskripsi}
-                        // onChange={(e) => setDeskripsi(e.target.value)}
+                        name="review"
+                        onChange={addData}
+                        value={input.review}
                       />
-
-                      <button className="btnrev">
-                        <h6>Send Review</h6>
+                      <button className="btnrev" onClick={handleReview}>
+                        Send Review
                       </button>
                     </Col>
                   </Row>
@@ -115,7 +116,6 @@ function Review() {
                 </Col>
               </Row>
             </Container>
-
             {/* <input type="submit" value="Submit" className="btn btn-review" /> */}
           </form>
         </div>
