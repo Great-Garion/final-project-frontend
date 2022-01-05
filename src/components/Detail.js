@@ -27,8 +27,11 @@ import {
 
 import Review from "./Review";
 import "./Detail.css";
+import { UserContext } from "../Context/UserProvider";
+import { useContext } from "react";
 
 function Detail() {
+  const { isLogin } = useContext(UserContext);
   const [dataDetail, setDataDetail] = useState({});
   const { id } = useParams();
 
@@ -36,8 +39,7 @@ function Detail() {
     axios(`https://lokakota.herokuapp.com/wisata/${id}`).then((result) => {
       setDataDetail(result.data);
     });
-  });
-  console.log(dataDetail);
+  }, []);
 
   return (
     <div style={{ height: "100%" }}>
@@ -123,7 +125,15 @@ function Detail() {
         <Container>
           <Row>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}>Hotel</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                Hotel
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
@@ -139,14 +149,20 @@ function Detail() {
             </Col>
 
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}>Restoran</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                Restoran
+              </h6>
               <Row>
                 <Col className="cardDetail">
-                 
                   <ul className="cardUl">
                     {dataDetail.restaurant?.map((item) => (
                       <li>
-                      
                         <FaHamburger /> {item}
                       </li>
                     ))}
@@ -155,7 +171,16 @@ function Detail() {
               </Row>
             </Col>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}> Transportasi</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                {" "}
+                Transportasi
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
@@ -174,13 +199,22 @@ function Detail() {
           <br />
           <Row>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}> Worship</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                {" "}
+                Worship
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
                     {dataDetail.worship?.map((item) => (
                       <li>
-                        <FaMosque/> {item}
+                        <FaMosque /> {item}
                       </li>
                     ))}
                   </ul>
@@ -188,7 +222,16 @@ function Detail() {
               </Row>
             </Col>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}> Polisi</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                {" "}
+                Polisi
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
@@ -202,7 +245,16 @@ function Detail() {
               </Row>
             </Col>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}> Hospital</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                {" "}
+                Hospital
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
@@ -219,7 +271,8 @@ function Detail() {
             </Col>
           </Row>
         </Container>
-        <Review />
+        {isLogin ? <Review/> : "silahkan login"}
+        <Review/>
       </div>
     </div>
   );

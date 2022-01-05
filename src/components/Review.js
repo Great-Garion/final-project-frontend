@@ -13,15 +13,15 @@ function Review() {
 
   const [star, setStar] = useState();
   const [deskripsi, setDeskripsi] = useState([]);
-
+  const {id} = useParams()
   useEffect(() => {
     const token = Cookies.get("lokaKota");
     console.log(token)
-    axios.get("localhost:4000/comment?wisata=61d1986f97aee5b7d0bc5c5", {
-      headers: { Authorization: `Bearer ${token}` },
+    axios(`https://lokakota.herokuapp.com/comment?wisata=${id}`, {
+      headers: { "Authorization": `Bearer ${token}` },
     }).then((result) =>{
       console.log(result.data);
-      setDeskripsi(result.data)
+      // setDeskripsi(result.data)
     });
   }, []);
   const [input, setInput] = useState("")
@@ -31,6 +31,7 @@ function Review() {
   const addData = () => {
     setDeskripsi([...deskripsi, input])
   }
+  
   const submidReview = (e) => {
     e.preventDefault();
     if (star === null && deskripsi === "") {
