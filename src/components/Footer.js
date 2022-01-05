@@ -77,6 +77,9 @@ function Footer() {
           </Col>
         </Row>
       </Container>
+      <div className="copyright">
+        <p>Copyright © 2022 LokaKota</p>
+      </div>
     </footer>
   );
 }

@@ -54,7 +54,7 @@ function Detail() {
         >
           <Row
             className="justify-content-md-center"
-            style={{ paddingTop: "97px" }}
+            style={{ paddingTop: "11px" }}
           >
             <Col xs md="auto">
               <Carousel style={{ height: "22rem", width: "30rem" }}>
@@ -123,7 +123,15 @@ function Detail() {
         <Container>
           <Row>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}>Hotel</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                Hotel
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
@@ -139,14 +147,20 @@ function Detail() {
             </Col>
 
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}>Restoran</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                Restoran
+              </h6>
               <Row>
                 <Col className="cardDetail">
-                 
                   <ul className="cardUl">
                     {dataDetail.restaurant?.map((item) => (
                       <li>
-                      
                         <FaHamburger /> {item}
                       </li>
                     ))}
@@ -155,7 +169,16 @@ function Detail() {
               </Row>
             </Col>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}> Transportasi</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                {" "}
+                Transportasi
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
@@ -174,13 +197,22 @@ function Detail() {
           <br />
           <Row>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}> Worship</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                {" "}
+                Worship
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
                     {dataDetail.worship?.map((item) => (
                       <li>
-                        <FaMosque/> {item}
+                        <FaMosque /> {item}
                       </li>
                     ))}
                   </ul>
@@ -188,7 +220,16 @@ function Detail() {
               </Row>
             </Col>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}> Polisi</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                {" "}
+                Polisi
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
@@ -202,7 +243,16 @@ function Detail() {
               </Row>
             </Col>
             <Col className="cardInfo">
-              <h6 style={{ textAlign: "center",fontSize:'25px',marginTop:'10px' }}> Hospital</h6>
+              <h6
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  marginTop: "10px",
+                }}
+              >
+                {" "}
+                Hospital
+              </h6>
               <Row>
                 <Col className="cardDetail">
                   <ul className="cardUl">
@@ -218,8 +268,8 @@ function Detail() {
               </Row>
             </Col>
           </Row>
+          <Review />
         </Container>
-        <Review />
       </div>
     </div>
   );
