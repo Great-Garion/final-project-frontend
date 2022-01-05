@@ -7,19 +7,43 @@
     display: flex;
     margin-left: 50px;
   }
-  
+  .lirev{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
   .input-review {
-    height: 100px;
-    width: 700px;
+   
     margin-left: 20px;
-    margin-top: 15px;
+  
     font-size: 20px;
     text-indent: 10px;
+    height: 6rem;
+    width: 18rem;
+    border-radius: 12px;
   }
+  .userCol{
+    text-align: center;
+  }
+  .btnrev{
+    margin-left: 20px;
+    border-radius: 12px;
+    width: 18rem;
+    background-color: orange;
+    border: none;
+    color: black;
+    height: 33px;
+  }
+  .cardBintang{
+    /* display: flex; */
+    justify-content: center;
   
+  }
+ 
   .bintang {
     margin-left: 20px;
     margin-top: -9px;
+   
   }
   
   .main-review {
