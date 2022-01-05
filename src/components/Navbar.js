@@ -2,22 +2,22 @@ import Logo from "../Logo.png";
 import { Container } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import "../style.css";
-import{UserContext} from '../Context/UserProvider'
-import {useContext} from 'react'
-
+import { UserContext } from "../Context/UserProvider";
+import { useContext } from "react";
+import Cookies from "js-cookie";
 function Navbar() {
-  const history =  useHistory()
+  const history = useHistory();
 
-  let {isLogin, setIsLogin}=useContext(UserContext)
-  
-  function logOut(){
-    if(isLogin){
-      setIsLogin(false)
-    }else{
-      history.push('/login')
+  let { isLogin, setIsLogin } = useContext(UserContext);
+
+  function logOut() {
+    if (isLogin) {
+      Cookies.remove("lokaKota");
+      setIsLogin(false);
     }
+    history.push("/login");
+  }
 
-}
   return (
     <div>
       <Container>
@@ -43,12 +43,9 @@ function Navbar() {
                 </li>
               </ul>
             </nav>
-            <button className="masuk"
-            onClick={logOut}
-            >
-             {isLogin ? " LogOut" : " Login"}
-              
-              </button>
+            <button className="masuk" onClick={logOut}>
+              {isLogin ? " LogOut" : " Login"}
+            </button>
           </header>
         </div>
       </Container>

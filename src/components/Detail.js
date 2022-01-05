@@ -56,7 +56,7 @@ function Detail() {
         >
           <Row
             className="justify-content-md-center"
-            style={{ paddingTop: "97px" }}
+            style={{ paddingTop: "11px" }}
           >
             <Col xs md="auto">
               <Carousel style={{ height: "22rem", width: "30rem" }}>
@@ -271,8 +271,7 @@ function Detail() {
             </Col>
           </Row>
         </Container>
-        {isLogin ? <Review/> : "silahkan login"}
-        <Review/>
+        {isLogin ? <Review/> : console.log("silahkan login")}
       </div>
     </div>
   );

@@ -24,17 +24,18 @@ function Login() {
     });
   };
 
-
   const handleLogin = async (e) => {
     e.preventDefault();
-    const {data} = await axios.post(
+    const { data } = await axios.post(
       "https://lokakota.herokuapp.com/auth/login",
       dataLogin
     );
-
-    Cookies.set("lokaKota", data.token, {expires: 100})
-    console.log(data);
-    history.push("/")
+ 
+    if (data.token) {
+      Cookies.set("lokaKota", data.token, { expires: 100 });
+      setIsLogin(true);
+      history.push("/");
+    }
   };
 
   return (
@@ -73,7 +74,8 @@ function Login() {
               Register
             </Link>
           </h6>
-          <button className="btnMasuk"
+          <button
+            className="btnMasuk"
             style={{ border: "none" }}
             onClick={handleLogin}
             type="submit"

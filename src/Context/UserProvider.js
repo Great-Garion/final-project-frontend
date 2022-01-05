@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 import Cookies from "js-cookie";
 export let UserContext = createContext();
 
@@ -14,10 +14,9 @@ function UserProvider(props) {
       const result = await axios.get("https://lokakota.herokuapp.com/user", {
         headers: { Authorization: `Bearer${token}` },
       });
-      console.log(result);
     }
-    console.log(token);
   }, []);
+  
   return (
     <UserContext.Provider value={{ isLogin, setIsLogin, isReg, setIsReg }}>
       {props.children}
