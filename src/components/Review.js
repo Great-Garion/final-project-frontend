@@ -55,7 +55,7 @@ function Review() {
             // onSubmit={submidReview}
           >
             <Container>
-              <Row>
+              <Row style={{paddingTop:'5rem'}}>
                 <Col>
                   <Row>
                     <Col className="cardReview">
@@ -88,29 +88,36 @@ function Review() {
                         onChange={addData}
                         value={input.review}
                       />
-                      <button className="btnrev" onClick={handleReview}>
+                      <button className="btnrev" onClick={handleReview} style={{fontFamily: 'Poppins'}}>
                         Send Review
                       </button>
                     </Col>
                   </Row>
                 </Col>
-                <Col>
+                <Col style={{marginTop: '75px'}}>
                   {deskripsi.map((item) => (
-                    <Row>
-                      <Col>
-                        <FaUserCircle size={30} />
+                    <Row style={{  
+                      alignItems: 'center',
+                      paddingBottom: '13px'}}>
+                      <Col xs lg="1">
+                        <FaUserCircle size={35} />
                       </Col>
-                      <Col className="userCol">
-                        <h6>{item.user?.username}</h6>
+                      <Col xs lg="3" className="userCol">
+                        <h6 style={{marginTop: '-8px'}}>{item.user?.username}</h6>
                       </Col>
-                      <Col>
+                      <Row>
+                      <Col style={{marginTop: '-17px',paddingLeft:'54px'}} >
                         <ReactStars
+                       
                           count={5}
                           value={item.rating}
                           edit={false}
                         />
-                      </Col>
-                      <h6>{item.review}</h6>
+                         </Col>
+                      </Row>
+                      
+                     
+                      <h6 style={{marginTop: '7px',paddingLeft: '2rem',fontFamily: 'Poppins'}}>{item.review}</h6>
                     </Row>
                   ))}
                 </Col>
