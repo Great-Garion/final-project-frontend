@@ -9,7 +9,7 @@
   }
   .lirev{
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; 
     display: flex;
   }
   .input-review {
@@ -23,7 +23,7 @@
     border-radius: 12px;
   }
   .userCol{
-    text-align: center;
+    text-align: start;
   }
   .btnrev{
     margin-left: 20px;
@@ -33,6 +33,7 @@
     border: none;
     color: black;
     height: 33px;
+    margin-top: 6px;
   }
   .cardBintang{
     /* display: flex; */
