@@ -84,6 +84,7 @@ function About() {
           </Col>
           <Col xs={6} style={{ textAlign: "center" }}>
             <img src={Ardi} style={{ width: "45px" }} /> Mohammad Sunardi
+
           </Col>
         </Row>
       </Container>
