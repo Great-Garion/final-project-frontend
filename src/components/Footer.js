@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import Logo from "../Logo.png";
 import {
   FaFacebookF,
-  FaWhatsapp,
-  FaTwitter,
+  FaTelegramPlane,
+  FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
 import "./Footer.css";
@@ -17,22 +17,22 @@ function Footer() {
           <div>
             <img
               src={Logo}
-              style={{ width: "130px", height: "70px" }}
+              style={{ width: "auto", height: "70px" }}
               alt="logo"
             />
             <h6>Find new tourist spots here and visit with your loved ones</h6>
             <div className="sosmed">
-              <Link to="/">
+              <Link to={{pathname:"https://www.facebook.com/font.artdie"}} target="_blank">
                 <FaFacebookF />
               </Link>
-              <Link to="/">
+              <Link to={{pathname:"https://www.instagram.com/dellila_26"}} target="_blank">
                 <FaInstagram />
               </Link>
-              <Link to="/">
-                <FaWhatsapp />
+              <Link to={{pathname:"https://web.telegram.org/z/#-1224624669"}} target="_blank">
+                <FaTelegramPlane />
               </Link>
-              <Link to="/">
-                <FaTwitter />
+              <Link to={{pathname:"https://www.linkedin.com/in/inayat-rahmat-684380227"}} target="_blank">
+                <FaLinkedinIn />
               </Link>
             </div>
           </div>
@@ -78,7 +78,7 @@ function Footer() {
         </Row>
       </Container>
       <div className="copyright">
-        <p>Copyright © 2022 LokaKota</p>
+        <p style={{textAlign: "center"}}>Copyright © 2022 LokaKota</p>
       </div>
     </footer>
   );

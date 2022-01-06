@@ -1,79 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-.container{
-	margin:auto;
+.container {
+  margin: auto;
+  color: "black";
 }
-.row{
-	display: flex;
-	flex-wrap: wrap;
-}
-
-footer{
-	background-color: #ffb8a2;
-    padding: 20px 0;
-}
-col{
-   width: 25%;
-   padding: 0px 15px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.judulFooter{
-	font-size: 18px;
-	font-family: "Poppins";
-	color: rgb(55, 208, 255);
-	text-transform: capitalize;
-	margin-bottom: 30px;
-	font-weight: 500;
-	position: relative;
+footer {
+  background-color: rgb(161, 255, 183);
+  padding: 20px 0;
 }
-h6{
-	font-family: "Lobster";
-}
-h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
+col {
+  width: 25%;
+  padding: 0px 15px;
 }
 
-li{
-	margin-bottom: 10px;
-	list-style: none;
+.judulFooter {
+  font-size: 18px;
+  font-family: "Poppins";
+  color: rgb(55, 208, 255);
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+h6 {
+  font-family: "Lobster";
+}
+h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
 }
 
-li a{
-	font-size: 16px;
-	text-align: left;
-	text-decoration: none;
-	font-weight: 300;
-	color: #ffffff;
-	color: #383838;
-	display:flex;
-	transition: all 0.3s ease;
-}
-li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
+li {
+  margin-bottom: 10px;
+  list-style: none;
 }
 
-.sosmed a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(0, 0, 0, 0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 35px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
+li a {
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  font-weight: 300;
+  color: #f88f6e;
+  color: #383838;
+  display: flex;
+  transition: all 0.3s ease;
 }
-.sosmed a:hover{
-	color: #24262b;
-	background-color: #ffffff;
+li a:hover {
+  color: #006849;
+  padding-left: 8px;
+}
+
+.sosmed a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.sosmed a:hover {
+  color: #24262b;
+  background-color: #ffffff;
 }
