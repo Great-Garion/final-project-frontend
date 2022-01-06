@@ -23,7 +23,7 @@ function Navbar() {
       <Container>
         <div>
           <header>
-            <img src={Logo} style={{ width: "15%" }} alt="logo" />
+            <img src={Logo} style={{ width: "15%" }} alt="logo" onClick={() => history.push("/")}/>
             <nav className="navMenu">
               <ul className="nav__links">
                 <li>

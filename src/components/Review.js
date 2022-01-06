@@ -4,46 +4,59 @@ import axios from "axios";
 import ReactStars from "react-rating-stars-component";
 import "./review.css";
 import { useEffect } from "react";
-import { FaStar } from "react-icons/fa";
 import { useState } from "react";
-import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
 
 function Review() {
   const [deskripsi, setDeskripsi] = useState([]);
+  const [success, setSuccess] = useState();
   const { id } = useParams();
 
   useEffect(() => {
     const token = Cookies.get("lokaKota");
     console.log(token);
-    axios(`https://lokakota.herokuapp.com/comment?wisata=${id}`, {
+    axios(`http://localhost:4000/comment?wisata=${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     }).then((result) => {
       console.log(result.data);
       setDeskripsi(result.data);
     });
-  }, []);
+  }, [success]);
 
   const [input, setInput] = useState({
     rating: 0,
     review: "",
+    wisata: id,
   });
 
   const addData = (e) => {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
   };
-  
-  const handleRating = (rating) => {
-    console.log(`rating : ${rating}`)
-    setInput({...input, rating})
-  }
 
-  const handleReview = (e) => {
+  const handleRating = (rating) => {
+    console.log(`rating : ${rating}`);
+    setInput({ ...input, rating });
+  };
+
+  const handleReview = async (e) => {
     e.preventDefault();
-    console.log(input);
+    const token = Cookies.get("lokaKota");
+    console.log(token);
+    const result = await axios("http://localhost:4000/comment", {
+      headers: { Authorization: `Bearer ${token}` },
+      data: input,
+      method: "post",
+    });
+    setSuccess(result.status);
+    console.log(success);
+    setInput({
+      rating: 0,
+      review: "",
+    });
+    console.log(result);
   };
 
   return (
@@ -123,7 +136,6 @@ function Review() {
                 </Col>
               </Row>
             </Container>
-            {/* <input type="submit" value="Submit" className="btn btn-review" /> */}
           </form>
         </div>
       </div>

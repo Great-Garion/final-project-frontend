@@ -30,9 +30,15 @@ function Object() {
               <Card.Body>
                 <Card.Title>Sumbawa</Card.Title>
                 <Card.Text>
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s, when an unknown printer took a galley of type
-                  and scrambled it to make a type specimen book.
+                  Tana Samawa atau yang sekarang disebut Kabupaten Sumbawa,
+                  Wilayah Kabupaten Sumbawa juga mencakup sejumlah pulau-pulau
+                  di sebelah utara Pulau Sumbawa, termasuk Pulau Moyo (pulau
+                  terbesar), Pulau Medang, Pulau Panjang, Pulau Liang, Pulau
+                  Ngali dan Pulau Rakit. Dimana pulau atau gili ini sudah tidak
+                  diragukan lagi keindahan alamnya, membuatnya menjadi target
+                  utama bagi wisatawan asing, khususnya menjadi tempat favorit
+                  bagi bangsawan ingris, oleh karena itu kami menyuguhkan
+                  beberapa tempat wisata yang bisa anda kunjungi.
                 </Card.Text>
               </Card.Body>
               <Button
@@ -65,9 +71,15 @@ function Object() {
               <Card.Body>
                 <Card.Title>Sumbawa Barat</Card.Title>
                 <Card.Text>
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s, when an unknown printer took a galley of type
-                  and scrambled it to make a type specimen book.
+                  Kabupaten Sumbawa Barat, adalah sebuah kabupaten di provinsi
+                  Nusa Tenggara Barat, Indonesia. Kabupaten terletak di bagian
+                  barat Pulau Sumbawa, berbatasan dengan Laut Flores di utara,
+                  Kabupaten Sumbawa di timur, Samudera Hindia di selatan serta
+                  Selat Alas di barat. Secara geografis, sumbawa barat memiliki
+                  banyak perbukitan dan pesisir pantai yang Panjang, membuat
+                  para pelancong merasa dimanjakan oleh kekayaan alamnya asri
+                  dan belum terjamah, berikut beberapa tempat wisata yang bisa
+                  anda mikmati.
                 </Card.Text>
               </Card.Body>
               <Button
