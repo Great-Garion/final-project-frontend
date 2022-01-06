@@ -89,8 +89,9 @@ function Detail() {
               </Row>
             </Col>
             <Col md="auto" style={{ width: "27rem" }}>
-              <h4> {dataDetail.tourism_spot}</h4>
-              <h6>
+              <h4 style={{fontFamily: 'Poppins',
+    fontWeight: 'bold'}}> {dataDetail.tourism_spot}</h4>
+              <h6 style={{fontFamily: 'inherit'}}>
                 Masjid Agung Darussalam Sumbawa Barat merupakan sebuah masjid
                 yang terletak di Kabupaten Sumbawa Barat, Indonesia. Masjid ini
                 dibangun pada tahun 2007 dan selesai pada tahun 2010. Bentuk ini
