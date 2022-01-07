@@ -1,6 +1,8 @@
 import { Form, Row, Col, Button, Container } from "react-bootstrap";
 import { useState } from "react";
+
 import "./Contact.css";
+
 function Contact() {
   let [contact, setContact] = useState({
     fistname: "",
@@ -46,7 +48,7 @@ function Contact() {
               fontSize: "32px",
             }}
           >
-            Contact Us{" "}
+            Contact Us
           </h6>
           <Row>
             <Col>

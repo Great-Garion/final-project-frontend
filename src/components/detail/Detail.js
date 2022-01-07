@@ -1,18 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
-import {
-  Col,
-  Row,
-  DropdownButton,
-  Dropdown,
-  Carousel,
-  Button,
-  Container,
-  Card,
-} from "react-bootstrap";
-
-import { Link, useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { useContext } from "react";
+import { Col, Row, Carousel, Container, Card } from "react-bootstrap";
 import {
   FaBuilding,
   FaAmbulance,
@@ -23,12 +13,12 @@ import {
   FaPhoneSquareAlt,
   FaAddressBook,
   FaClock,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 
-import Review from "./Review";
+import { UserContext } from "../../Context/UserProvider";
+import Review from "../review/Review";
 import "./Detail.css";
-import { UserContext } from "../Context/UserProvider";
-import { useContext } from "react";
 
 function Detail() {
   const { isLogin } = useContext(UserContext);
@@ -93,13 +83,7 @@ function Detail() {
                 {" "}
                 {dataDetail.tourism_spot}
               </h4>
-              <h6 style={{ fontFamily: "inherit" }}>
-                Masjid Agung Darussalam Sumbawa Barat merupakan sebuah masjid
-                yang terletak di Kabupaten Sumbawa Barat, Indonesia. Masjid ini
-                dibangun pada tahun 2007 dan selesai pada tahun 2010. Bentuk ini
-                pula menjadi ciri khas setiap bangunan dan berbagai aktivitas
-                administrasi pemerintah dan masyarakat kabupaten Sumbawa Barat
-              </h6>
+              <h6 style={{ fontFamily: "inherit" }}>{dataDetail.desciption}</h6>
               <ul>
                 <li>
                   <b>
@@ -115,8 +99,17 @@ function Detail() {
                 </li>
                 <li>
                   <b>
-                    <FaClock /> Jam Buka :{" "}
+                    <FaClock /> Jam Buka :
                   </b>
+                  {dataDetail.waktu?.map((item) => (
+                  <li>{item}</li>
+                ))}
+                </li>
+                <li>
+                  <Link to={{ pathname: `${dataDetail.maps}` }} target="_blank">
+                    <FaMapMarkerAlt />
+                    <h6>Maps</h6>
+                  </Link>
                 </li>
               </ul>
             </Col>

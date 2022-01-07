@@ -1,4 +1,4 @@
-import Object from "./Object";
+import Object from "../wisata/Object";
 
 function Home() {
   return (

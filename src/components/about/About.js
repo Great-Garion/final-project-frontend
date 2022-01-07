@@ -1,15 +1,17 @@
-import Logo from "../Logo.png";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import Auzan from "./images/auzan.png";
-import Thoriq from "./images/thoriq.png";
-import Dolton from "./images/doltons.png";
-import Luthfi from "./images/luthfi.png";
-import Dellila from "./images/dellila.png";
-import Yeyen from "./images/yeyen.png";
-import Inayat from "./images/inayat.png";
-import Ardi from "./images/ardi.png";
+
+import Logo from "../images/Logo.png";
+import Auzan from "../images/auzan.png";
+import Thoriq from "../images/thoriq.png";
+import Dolton from "../images/doltons.png";
+import Luthfi from "../images/luthfi.png";
+import Dellila from "../images/dellila.png";
+import Yeyen from "../images/yeyen.png";
+import Inayat from "../images/inayat.png";
+import Ardi from "../images/ardi.png";
 
 function About() {
+
   return (
     <div>
       <Container>
@@ -36,11 +38,13 @@ function About() {
                 mengunjungi lokasi wisata tersebut.
               </p>
             </Col>
+
             <Col>
               <Card.Img style={{ width: "42rem" }} variant="top" src={Logo} />
             </Col>
           </Row>
         </Row>
+
         <h6
           style={{
             fontSize: "22px",
@@ -53,17 +57,21 @@ function About() {
           <Col style={{ textAlign: "center" }}>
             <img src={Auzan} style={{ width: "45px" }} /> Auzan Assidqi
           </Col>
+
           <Col xs={6} style={{ textAlign: "center" }}>
             <img src={Thoriq} style={{ width: "45px" }} /> Thoriq Nur Faizal
           </Col>
+
           <Col style={{ textAlign: "center" }}>
             <img src={Dolton} style={{ width: "45px" }} /> Doltons Edward N
             Pabiaran
           </Col>
+
           <Col xs={6} style={{ textAlign: "center" }}>
             <img src={Luthfi} style={{ width: "45px" }} /> Luthfi Fitra Musyaffa
           </Col>
         </Row>
+
         <h6
           style={{
             fontSize: "22px",
@@ -76,15 +84,17 @@ function About() {
           <Col style={{ textAlign: "center" }}>
             <img src={Dellila} style={{ width: "45px" }} /> Dellila Pellokila
           </Col>
+
           <Col xs={6} style={{ textAlign: "center" }}>
             <img src={Yeyen} style={{ width: "45px" }} /> Yeyen Tri Utami
           </Col>
+
           <Col style={{ textAlign: "center" }}>
             <img src={Inayat} style={{ width: "45px" }} /> Rahmat Inayat
           </Col>
+
           <Col xs={6} style={{ textAlign: "center" }}>
             <img src={Ardi} style={{ width: "45px" }} /> Mohammad Sunardi
-
           </Col>
         </Row>
       </Container>

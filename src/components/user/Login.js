@@ -1,16 +1,17 @@
 import { useHistory } from "react-router";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+
 import axios from "axios";
 import Cookies from "js-cookie";
 
-import { UserContext } from "../Context/UserProvider";
+import { UserContext } from "../../Context/UserProvider";
 import "./login.css";
 
 function Login() {
   const history = useHistory();
-  const [dataRegister, setDataRegister] = useState([]);
-  const { isLogin, setIsLogin } = useContext(UserContext);
+  const { setIsLogin } = useContext(UserContext);
+
   const [dataLogin, setDataLogin] = useState({
     email: "",
     password: "",
@@ -30,7 +31,6 @@ function Login() {
       "https://lokakota.herokuapp.com/auth/login",
       dataLogin
     );
- 
     if (data.token) {
       Cookies.set("lokaKota", data.token, { expires: 100 });
       setIsLogin(true);

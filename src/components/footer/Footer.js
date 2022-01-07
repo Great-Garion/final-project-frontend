@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import Logo from "../Logo.png";
 import {
   FaFacebookF,
   FaTelegramPlane,
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+
+import Logo from "../images/Logo.png";
 import "./Footer.css";
 
 function Footer() {

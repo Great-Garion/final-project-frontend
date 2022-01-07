@@ -1,8 +1,10 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { useHistory, useLocation } from "react-router-dom";
-import "../style.css";
+
+import axios from "axios";
+import "../all.css";
+
 function ListWisata() {
   const history = useHistory();
   const [listWisata, setListWisata] = useState([]);
