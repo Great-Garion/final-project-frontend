@@ -1,14 +1,10 @@
 import { useHistory } from "react-router";
 import { Card, Row, Col, Container, Button } from "react-bootstrap";
-import "../style.css";
+
+import "../all.css";
 
 function Object() {
   const history = useHistory();
-
-  // const handleObject = (e) => {
-  //   e.preventDefault();
-  //   history.push("/wisata?kabupaten=Sumbawa");
-  // };
 
   return (
     <div className="boxWisata">
@@ -66,7 +62,7 @@ function Object() {
               <Card.Img
                 style={{ borderRadius: "30px 30px 0px 0px" }}
                 variant="top"
-                src="https://i.ibb.co/GTjk0dp/Sawah.jpg"
+                src="https://i.ibb.co/NNstGTn/Masjid-Agung-Darussalam.jpg"
               />
               <Card.Body>
                 <Card.Title>Sumbawa Barat</Card.Title>

@@ -5,6 +5,7 @@
   margin: auto;
   color: "black";
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +15,7 @@ footer {
   background-color: rgb(161, 255, 183);
   padding: 20px 0;
 }
+
 col {
   width: 25%;
   padding: 0px 15px;
@@ -28,9 +30,11 @@ col {
   font-weight: 500;
   position: relative;
 }
+
 h6 {
   font-family: "Lobster";
 }
+
 h4::before {
   content: "";
   position: absolute;
@@ -57,6 +61,7 @@ li a {
   display: flex;
   transition: all 0.3s ease;
 }
+
 li a:hover {
   color: #006849;
   padding-left: 8px;
@@ -74,6 +79,7 @@ li a:hover {
   color: #ffffff;
   transition: all 0.5s ease;
 }
+
 .sosmed a:hover {
   color: #24262b;
   background-color: #ffffff;

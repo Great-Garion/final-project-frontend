@@ -4,24 +4,28 @@
   margin-right: 3rem;
   background-color: orange;
 }
-.info{
-    border: none;
+
+.info {
+  border: none;
   border-radius: 12px;
   background-color: orange;
 }
+
 .cardUl {
   margin: 0;
   padding: 0;
-  
-    margin-top: 8px;
-    margin-left: 3rem;
-    margin-bottom: 8px;
+
+  margin-top: 8px;
+  margin-left: 3rem;
+  margin-bottom: 8px;
 }
+
 .cardUl1 {
   margin: 0;
   padding: 0;
   padding-right: 19px;
 }
+
 .cardDetail {
   display: contents;
 }

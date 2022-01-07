@@ -1,13 +1,14 @@
-import Logo from "../Logo.png";
-import { Container } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
-import "../style.css";
-import { UserContext } from "../Context/UserProvider";
-import { useContext } from "react";
 import Cookies from "js-cookie";
+import { Link, useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { Container } from "react-bootstrap";
+
+import { UserContext } from "../../Context/UserProvider";
+import Logo from "../images/Logo.png";
+import "../all.css";
+
 function Navbar() {
   const history = useHistory();
-
   let { isLogin, setIsLogin } = useContext(UserContext);
 
   function logOut() {
@@ -23,7 +24,12 @@ function Navbar() {
       <Container>
         <div>
           <header>
-            <img src={Logo} style={{ width: "15%" }} alt="logo" onClick={() => history.push("/")}/>
+            <img
+              src={Logo}
+              style={{ width: "15%" }}
+              alt="logo"
+              onClick={() => history.push("/")}
+            />
             <nav className="navMenu">
               <ul className="nav__links">
                 <li>

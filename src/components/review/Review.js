@@ -1,13 +1,14 @@
 import React from "react";
-import Cookies from "js-cookie";
-import axios from "axios";
-import ReactStars from "react-rating-stars-component";
-import "./review.css";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
+
+import Cookies from "js-cookie";
+import axios from "axios";
+
+import "./review.css";
 
 function Review() {
   const [deskripsi, setDeskripsi] = useState([]);
@@ -63,12 +64,9 @@ function Review() {
     <div className="review-container">
       <div className="main-input">
         <div>
-          <form
-            className="form-column"
-            // onSubmit={submidReview}
-          >
+          <form className="form-column">
             <Container>
-              <Row style={{paddingTop:'5rem'}}>
+              <Row style={{ paddingTop: "5rem" }}>
                 <Col>
                   <Row>
                     <Col className="cardReview">
@@ -101,36 +99,53 @@ function Review() {
                         onChange={addData}
                         value={input.review}
                       />
-                      <button className="btnrev" onClick={handleReview} style={{fontFamily: 'Poppins'}}>
+                      <button
+                        className="btnrev"
+                        onClick={handleReview}
+                        style={{ fontFamily: "Poppins" }}
+                      >
                         Send Review
                       </button>
                     </Col>
                   </Row>
                 </Col>
-                <Col style={{marginTop: '75px'}}>
+                <Col style={{ marginTop: "75px" }}>
                   {deskripsi.map((item) => (
-                    <Row style={{  
-                      alignItems: 'center',
-                      paddingBottom: '13px'}}>
+                    <Row
+                      style={{
+                        alignItems: "center",
+                        paddingBottom: "13px",
+                      }}
+                    >
                       <Col xs lg="1">
                         <FaUserCircle size={35} />
                       </Col>
                       <Col xs lg="3" className="userCol">
-                        <h6 style={{marginTop: '-8px'}}>{item.user?.username}</h6>
+                        <h6 style={{ marginTop: "-8px" }}>
+                          {item.user?.username}
+                        </h6>
                       </Col>
                       <Row>
-                      <Col style={{marginTop: '-17px',paddingLeft:'54px'}} >
-                        <ReactStars
-                       
-                          count={5}
-                          value={item.rating}
-                          edit={false}
-                        />
-                         </Col>
+                        <Col
+                          style={{ marginTop: "-17px", paddingLeft: "54px" }}
+                        >
+                          <ReactStars
+                            count={5}
+                            value={item.rating}
+                            edit={false}
+                          />
+                        </Col>
                       </Row>
-                      
-                     
-                      <h6 style={{marginTop: '7px',paddingLeft: '2rem',fontFamily: 'Poppins'}}>{item.review}</h6>
+
+                      <h6
+                        style={{
+                          marginTop: "7px",
+                          paddingLeft: "2rem",
+                          fontFamily: "Poppins",
+                        }}
+                      >
+                        {item.review}
+                      </h6>
                     </Row>
                   ))}
                 </Col>

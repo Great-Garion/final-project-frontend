@@ -1,6 +1,7 @@
 import { useParams } from "react-router"
 
 function Alihan() {
+    
     let {Alihan} = useParams()
     return (
         <div className = "text-center">

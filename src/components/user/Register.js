@@ -1,23 +1,18 @@
-import { useState, useEffect, useContext } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
-import axios from "axios";
 
-import { UserContext } from "../Context/UserProvider";
+import axios from "axios";
 import "./login.css";
-import Cookies from "js-cookie";
 
 function Register() {
   let history = useHistory();
-  let { isReg, setIsReg } = useContext(UserContext);
   let [user, setUser] = useState({
     fullname: "",
     username: "",
     email: "",
     password: "",
   });
-
-  let [dataApiRegis, setDataApiRegis] = useState([]);
 
   const handleChangeRegister = (event) => {
     const { name, value } = event.target;
@@ -52,6 +47,7 @@ function Register() {
               value={user.fullname}
               name="fullname"
               onChange={handleChangeRegister}
+              autocomplete="off"
             />
             <label>Fullname</label>
           </div>
@@ -61,6 +57,7 @@ function Register() {
               value={user.username}
               name="username"
               onChange={handleChangeRegister}
+              autocomplete="off"
             />
             <label>Username</label>
           </div>
@@ -70,6 +67,7 @@ function Register() {
               value={user.email}
               name="email"
               onChange={handleChangeRegister}
+              autocomplete="off"
             />
             <label>Email</label>
           </div>
@@ -79,15 +77,15 @@ function Register() {
               value={user.password}
               name="password"
               onChange={handleChangeRegister}
+              autocomplete="off"
             />
             <label>Password</label>
           </div>
           <h6 style={{ color: "white" }}>
-            {" "}
-            Have Account ?{" "}
+            Have Account ?
             <Link to="/login" style={{ textDecoration: "none", color: "green" }}>
               Login
-            </Link>{" "}
+            </Link>
           </h6>
           <button className="bbtnMasuk"
             style={{ border: "none" }}

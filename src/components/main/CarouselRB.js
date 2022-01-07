@@ -1,4 +1,3 @@
-import { SliderData } from "./SliderData";
 import { Carousel } from "react-bootstrap";
 
 function CarouselRB() {
