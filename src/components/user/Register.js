@@ -38,7 +38,7 @@ function Register() {
 
   return (
     <div>
-      <div className="login-box" style={{marginTop: "50px"}}>
+      <div className="login-box" style={{ marginTop: "50px" }}>
         <h2>Register</h2>
         <form>
           <div className="user-box">
@@ -83,11 +83,15 @@ function Register() {
           </div>
           <h6 style={{ color: "white" }}>
             Have Account ?
-            <Link to="/login" style={{ textDecoration: "none", color: "green" }}>
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "green" }}
+            >
               Login
             </Link>
           </h6>
-          <button className="bbtnMasuk"
+          <button
+            className="bbtnMasuk"
             style={{ border: "none" }}
             onClick={handleChangebutton}
           >

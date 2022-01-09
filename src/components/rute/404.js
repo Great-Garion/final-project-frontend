@@ -1,13 +1,12 @@
-import { useParams } from "react-router"
+import { useParams } from "react-router";
 
 function Alihan() {
-    
-    let {Alihan} = useParams()
-    return (
-        <div className = "text-center">
-            <h4>NotFound404</h4>
-        </div>
-    )
+  let { Alihan } = useParams();
+  return (
+    <div className="text-center">
+      <h4>NotFound404</h4>
+    </div>
+  );
 }
 
-export default Alihan
+export default Alihan;

@@ -56,7 +56,6 @@ function Contact() {
                 style={{ height: "38px", borderRadius: "5px" }}
                 type="text"
                 placeholder="     your name"
-
                 name="fistname"
                 onChange={handleComent}
                 value={contact.fistname}
@@ -84,7 +83,6 @@ function Contact() {
               type="textarea"
               name="comment"
               placeholder="     create your massage in here"
-
               onChange={handleComent}
               value={contact.comment}
             />

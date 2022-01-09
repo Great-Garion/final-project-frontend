@@ -21,20 +21,20 @@ function Navbar() {
 
   return (
     <div>
-      <Container>
-        <div>
-          <header>
-            <img
-              src={Logo}
-              style={{ width: "15%" }}
-              alt="logo"
-              onClick={() => history.push("/")}
-            />
-            <nav className="navMenu">
+      <nav className="navMenu">
+        <Container>
+          <div>
+            <header>
+              <img
+                src={Logo}
+                style={{ width: "15%" }}
+                alt="logo"
+                onClick={() => history.push("/")}
+              />
               <ul className="nav__links">
                 <li>
                   <Link to="/home" className="nav-btn fs-4">
-                    Home
+                    <b>Home</b>
                   </Link>
                 </li>
                 <li>
@@ -48,13 +48,13 @@ function Navbar() {
                   </Link>
                 </li>
               </ul>
-            </nav>
-            <button className="masuk" onClick={logOut}>
-              {isLogin ? " LogOut" : " Login"}
-            </button>
-          </header>
-        </div>
-      </Container>
+              <button className="masuk" onClick={logOut}>
+                {isLogin ? " LogOut" : " Login"}
+              </button>
+            </header>
+          </div>
+        </Container>
+      </nav>
     </div>
   );
 }

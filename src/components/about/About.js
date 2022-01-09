@@ -11,7 +11,6 @@ import Inayat from "../images/inayat.png";
 import Ardi from "../images/ardi.png";
 
 function About() {
-
   return (
     <div>
       <Container>

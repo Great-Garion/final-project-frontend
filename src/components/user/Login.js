@@ -64,7 +64,6 @@ function Login() {
               onChange={handleUser}
               value={dataLogin.password}
               autocomplete="off"
-
             />
             <label>Password</label>
           </div>
