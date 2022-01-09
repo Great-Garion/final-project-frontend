@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lily+Script+One&family=Lobster&family=Montserrat:ital@1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=IBM+Plex+Sans&family=Lily+Script+One&family=Lobster&family=Montserrat:ital@1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=IBM+Plex+Sans&family=Lily+Script+One&family=Lobster&family=Montserrat:ital@1&family=Pushster&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,6 +30,8 @@ header {
 .nav__links li {
   display: inline-block;
   padding: 0px 20px;
+  margin-bottom: 0%;
+  margin-top: 10px;
 }
 
 .nav__links li a {
@@ -45,11 +45,11 @@ header {
 .nav-btn {
   color: yellowgreen;
   text-decoration: none;
-  font-family: "Lily Script One", sans-serif;
+  font-family: "Anton", sans-serif;
 }
 
 .masuk {
-  font-family: "Lily Script One", sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 15px;
   color: honeydew;
   margin-left: 50px;

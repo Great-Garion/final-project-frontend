@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 import { useContext } from "react";
-import { Col, Row, Carousel, Container, Card } from "react-bootstrap";
+import { Col, Row, Carousel, Container, Card, Button } from "react-bootstrap";
 import {
   FaBuilding,
   FaAmbulance,
@@ -21,6 +21,7 @@ import Review from "../review/Review";
 import "./Detail.css";
 
 function Detail() {
+  const history = useHistory();
   const { isLogin } = useContext(UserContext);
   const [dataDetail, setDataDetail] = useState({});
   const { id } = useParams();
@@ -102,13 +103,14 @@ function Detail() {
                     <FaClock /> Jam Buka :
                   </b>
                   {dataDetail.waktu?.map((item) => (
-                  <li>{item}</li>
-                ))}
+                    <li>{item}</li>
+                  ))}
                 </li>
                 <li>
                   <Link to={{ pathname: `${dataDetail.maps}` }} target="_blank">
-                    <FaMapMarkerAlt />
-                    <h6>Maps</h6>
+                    <b>
+                      <FaMapMarkerAlt /> <b>Maps</b>
+                    </b>
                   </Link>
                 </li>
               </ul>
@@ -135,8 +137,7 @@ function Detail() {
                   <ul className="cardUl">
                     {dataDetail.hotel?.map((item) => (
                       <li>
-                        <FaBuilding />
-                        {item}
+                        <FaBuilding /> {item}
                       </li>
                     ))}
                   </ul>
@@ -183,8 +184,7 @@ function Detail() {
                     {dataDetail.transport?.map((item) => (
                       <li>
                         {" "}
-                        <FaCarSide />
-                        {item}
+                        <FaCarSide /> {item}
                       </li>
                     ))}
                   </ul>{" "}
@@ -267,7 +267,21 @@ function Detail() {
             </Col>
           </Row>
         </Container>
-        {isLogin ? <Review /> : console.log("silahkan login")}
+        {isLogin ? (
+          <Review />
+        ) : (
+          <Button
+            onClick={() => history.push("/login")}
+            style={{
+              backgroundColor: "green",
+              marginTop: "70px",
+              marginLeft: "470px",
+              marginBottom: "50px",
+            }}
+          >
+            Login agar dapat melihat review wisata
+          </Button>
+        )}
       </div>
     </div>
   );

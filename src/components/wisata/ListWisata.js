@@ -11,14 +11,16 @@ function ListWisata() {
 
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
-  const kabupaten = queryParams.get('kabupaten');
-  console.log(kabupaten)
+  const kabupaten = queryParams.get("kabupaten");
+  console.log(kabupaten);
 
   useEffect(() => {
-    axios(`https://lokakota.herokuapp.com/wisata?kabupaten=${kabupaten}`).then((result) => {
-      console.log(result.data);
-      setListWisata(result.data);
-    });
+    axios(`https://lokakota.herokuapp.com/wisata?kabupaten=${kabupaten}`).then(
+      (result) => {
+        console.log(result.data);
+        setListWisata(result.data);
+      }
+    );
   }, []);
 
   const handleDetail = (id) => {
@@ -28,16 +30,16 @@ function ListWisata() {
   return (
     <div className="boxWisata">
       <Container>
-        <Row xs={1} md={3} className="g-4">
+        <Row xs={1} md={3} className="g-4" style={{ marginLeft: "50px" }}>
           {listWisata.map((item) => (
             <Col>
               <Card
                 style={{
                   width: "16rem",
-                  height: "15rem",
+                  height: "18rem",
                   alignItems: "center",
                   marginTop: "20px",
-                  border: "none",
+                  borderRadius: "15px 15px 15px 15px",
                 }}
               >
                 <Card.Img
@@ -53,6 +55,9 @@ function ListWisata() {
                   >
                     {item.tourism_spot}
                   </button>
+                  <p style={{ marginTop: "10px", fontSize: "13px" }}>
+                    {item.address}
+                  </p>
                 </Card.Body>
               </Card>
             </Col>

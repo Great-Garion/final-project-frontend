@@ -18,7 +18,7 @@ function Review() {
   useEffect(() => {
     const token = Cookies.get("lokaKota");
     console.log(token);
-    axios(`http://localhost:4000/comment?wisata=${id}`, {
+    axios(`https://lokakota.herokuapp.com/wisata/comment?wisata=${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     }).then((result) => {
       console.log(result.data);
@@ -46,11 +46,14 @@ function Review() {
     e.preventDefault();
     const token = Cookies.get("lokaKota");
     console.log(token);
-    const result = await axios("http://localhost:4000/comment", {
-      headers: { Authorization: `Bearer ${token}` },
-      data: input,
-      method: "post",
-    });
+    const result = await axios(
+      "https://lokakota.herokuapp.com/wisata/comment",
+      {
+        headers: { Authorization: `Bearer ${token}` },
+        data: input,
+        method: "post",
+      }
+    );
     setSuccess(result.status);
     console.log(success);
     setInput({

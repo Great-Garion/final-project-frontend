@@ -16,6 +16,8 @@ function Object() {
               style={{
                 borderRadius: "30px 30px 30px 30px",
                 paddingBottom: "10px",
+                height: "41rem",
+                alignItems: "center",
               }}
             >
               <Card.Img
@@ -44,7 +46,7 @@ function Object() {
                   border: "none",
                   borderRadius: "20px",
                   width: "150px",
-                  marginLeft: "200px",
+                  marginLeft: "300px",
                 }}
               >
                 click here
@@ -57,6 +59,8 @@ function Object() {
               style={{
                 borderRadius: "30px 30px 30px 30px",
                 paddingBottom: "10px",
+                height: "41rem",
+                alignItems: "center",
               }}
             >
               <Card.Img
@@ -85,7 +89,7 @@ function Object() {
                   border: "none",
                   borderRadius: "20px",
                   width: "150px",
-                  marginLeft: "200px",
+                  marginLeft: "300px",
                 }}
               >
                 click here
