@@ -16,12 +16,9 @@ function Contact() {
       [name]: value,
     });
   };
-  console.log(contact);
 
   let submitMassage = (e) => {
     e.preventDefault();
-
-    console.log(`data anda : ${contact.fistname}`, contact);
     setContact({
       fistname: "",
       email: "",
@@ -55,7 +52,7 @@ function Contact() {
               <input
                 style={{ height: "38px", borderRadius: "5px" }}
                 type="text"
-                placeholder="     your name"
+                placeholder="     Your name"
                 name="fistname"
                 onChange={handleComent}
                 value={contact.fistname}
@@ -66,7 +63,7 @@ function Contact() {
                 style={{ height: "38px", borderRadius: "5px" }}
                 type="email"
                 name="email"
-                placeholder="     your email"
+                placeholder="     Your email"
                 onChange={handleComent}
                 value={contact.email}
               />
@@ -82,7 +79,7 @@ function Contact() {
               }}
               type="textarea"
               name="comment"
-              placeholder="     create your massage in here"
+              placeholder="     Add your message"
               onChange={handleComent}
               value={contact.comment}
             />

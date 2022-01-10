@@ -39,18 +39,18 @@ function Object() {
                   beberapa tempat wisata yang bisa anda kunjungi.
                 </Card.Text>
               </Card.Body>
-              <Button
+              <button
+                className="btnName"
                 onClick={() => history.push("/wisata?kabupaten=Sumbawa")}
                 style={{
                   backgroundColor: "orange",
                   border: "none",
                   borderRadius: "20px",
                   width: "150px",
-                  marginLeft: "300px",
                 }}
               >
-                click here
-              </Button>
+                <b>More Detail</b>
+              </button>
             </Card>
           </Col>
           <Col>
@@ -82,18 +82,18 @@ function Object() {
                   anda mikmati.
                 </Card.Text>
               </Card.Body>
-              <Button
+              <button
+                className="btnName"
                 onClick={() => history.push("/wisata?kabupaten=Sumbawa+Barat")}
                 style={{
                   backgroundColor: "orange",
                   border: "none",
                   borderRadius: "20px",
                   width: "150px",
-                  marginLeft: "300px",
                 }}
               >
-                click here
-              </Button>
+                <b>More Detail</b>
+              </button>
             </Card>
           </Col>
         </Row>

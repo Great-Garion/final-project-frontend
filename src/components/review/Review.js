@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
 
 import Cookies from "js-cookie";
@@ -17,11 +17,9 @@ function Review() {
 
   useEffect(() => {
     const token = Cookies.get("lokaKota");
-    console.log(token);
-    axios(`https://lokakota.herokuapp.com/wisata/comment?wisata=${id}`, {
+    axios(`https://lokakota.herokuapp.com/comment?wisata=${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     }).then((result) => {
-      console.log(result.data);
       setDeskripsi(result.data);
     });
   }, [success]);
@@ -38,29 +36,22 @@ function Review() {
   };
 
   const handleRating = (rating) => {
-    console.log(`rating : ${rating}`);
     setInput({ ...input, rating });
   };
 
   const handleReview = async (e) => {
     e.preventDefault();
     const token = Cookies.get("lokaKota");
-    console.log(token);
-    const result = await axios(
-      "https://lokakota.herokuapp.com/wisata/comment",
-      {
-        headers: { Authorization: `Bearer ${token}` },
-        data: input,
-        method: "post",
-      }
-    );
+    const result = await axios("https://lokakota.herokuapp.com/comment", {
+      headers: { Authorization: `Bearer ${token}` },
+      data: input,
+      method: "post",
+    });
     setSuccess(result.status);
-    console.log(success);
     setInput({
       rating: 0,
       review: "",
     });
-    console.log(result);
   };
 
   return (
@@ -82,7 +73,7 @@ function Review() {
                               Review And Rating
                             </h6>
                           </li>
-                          <li style={{ marginLeft: "50px" }}>
+                          <li>
                             <ReactStars
                               className="rating"
                               size={30}
@@ -97,10 +88,11 @@ function Review() {
                       <input
                         className="input-review"
                         type="textarea"
-                        placeholder="review"
+                        placeholder="Berikan review tempat wisata ini"
                         name="review"
                         onChange={addData}
                         value={input.review}
+                        
                       />
                       <button
                         className="btnrev"
@@ -114,42 +106,56 @@ function Review() {
                 </Col>
                 <Col style={{ marginTop: "75px" }}>
                   {deskripsi.map((item) => (
-                    <Row
-                      style={{
-                        alignItems: "center",
-                        paddingBottom: "13px",
-                      }}
-                    >
-                      <Col xs lg="1">
-                        <FaUserCircle size={35} />
-                      </Col>
-                      <Col xs lg="3" className="userCol">
-                        <h6 style={{ marginTop: "-8px" }}>
-                          {item.user?.username}
-                        </h6>
-                      </Col>
-                      <Row>
-                        <Col
-                          style={{ marginTop: "-17px", paddingLeft: "54px" }}
-                        >
-                          <ReactStars
-                            count={5}
-                            value={item.rating}
-                            edit={false}
-                          />
-                        </Col>
-                      </Row>
-
-                      <h6
+                    <Card className="review" style={{ width: "450px", marginTop: "35px" }}>
+                      <Row
+                        className="g-0"
                         style={{
-                          marginTop: "7px",
-                          paddingLeft: "2rem",
-                          fontFamily: "Poppins",
+                          alignItems: "center",
                         }}
                       >
-                        {item.review}
-                      </h6>
-                    </Row>
+                        <Card.Body>
+                          <Card.Title>
+                            <Row>
+                              <Col xs lg="1">
+                                <FaUserCircle size={35} />
+                              </Col>{" "}
+                              <Col xs lg="3" className="userCol">
+                                <h6
+                                  style={{
+                                    marginTop: "10px",
+                                    marginLeft: "10px",
+                                  }}
+                                >
+                                  {item.user?.username}
+                                </h6>
+                              </Col>
+                              <Col
+                                style={{
+                                  marginTop: "10px",
+                                  paddingLeft: "200px",
+                                }}
+                              >
+                                <ReactStars
+                                  count={5}
+                                  value={item.rating}
+                                  edit={false}
+                                />
+                              </Col>
+                            </Row>
+                          </Card.Title>
+                          <Card.Text>{item.review}</Card.Text>
+                          <Button
+                            style={{
+                              backgroundColor: "greenyellow",
+                              border: "none",
+                              marginLeft: "340px"
+                            }}
+                          >
+                            Reply
+                          </Button>
+                        </Card.Body>
+                      </Row>
+                    </Card>
                   ))}
                 </Col>
               </Row>

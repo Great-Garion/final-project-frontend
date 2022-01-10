@@ -18,8 +18,8 @@
   margin-left: 20px;
   font-size: 20px;
   text-indent: 10px;
-  height: 6rem;
-  width: 18rem;
+  height: 8rem;
+  width: 20rem;
   border-radius: 12px;
 }
 
@@ -30,7 +30,7 @@
 .btnrev {
   margin-left: 20px;
   border-radius: 12px;
-  width: 18rem;
+  width: 20rem;
   background-color: orange;
   border: none;
   color: black;
@@ -88,4 +88,9 @@
 .btn-review {
   margin-top: 20px;
   margin-left: 50px;
+}
+
+.review {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }

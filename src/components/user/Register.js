@@ -27,7 +27,6 @@ function Register() {
       "https://lokakota.herokuapp.com/auth/regis",
       user
     );
-    console.log(result);
     history.push("/login");
   };
 
@@ -91,9 +90,10 @@ function Register() {
             </Link>
           </h6>
           <button
-            className="bbtnMasuk"
-            style={{ border: "none" }}
+            className="btnMasuk"
+            style={{ border: "none", }}
             onClick={handleChangebutton}
+            type="submit"
           >
             Register
           </button>
