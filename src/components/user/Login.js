@@ -47,9 +47,7 @@ function Login() {
             <input
               type="email"
               name="email"
-              className="form-control"
               onChange={handleUser}
-              label="username"
               value={dataLogin.email}
               autocomplete="off"
             />
@@ -59,8 +57,6 @@ function Login() {
             <input
               type="password"
               name="password"
-              label="password"
-              className="form-control"
               onChange={handleUser}
               value={dataLogin.password}
               autocomplete="off"

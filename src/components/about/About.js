@@ -17,29 +17,28 @@ function About() {
         <Row className="justify-content-md-center">
           <Row style={{ marginBottom: "3rem" }}>
             <Col style={{ marginTop: "4rem" }}>
-              <h6 style={{ fontSize: "27px" }}> About Us</h6>
+              <h6 style={{ fontSize: "35px", color: "rgb(55, 208, 255)"}}> About Us</h6>
 
-              <p style={{ width: "24rem" }}>
-                Di dalam website lokakota tour, tersedia berbagai jenis media
+              <p style={{ textIndent: "45px" }}>
+                Lokakota tour menyediakan berbagai jenis media yang
                 dapat diaplikasikan untuk mendukung promosi dan pemberian
                 informasi penting tempat wisata yang berada di kabupaten sumbawa
                 dan sumbawa barat.
               </p>
-              <p>
+              <hr />
+              <p style={{ textIndent: "45px" }}>
                 Website ini dapat bermanfaat secara signifikan dalam mengenalkan
                 budaya serta tradisi setempat yang masih kental. Indonesia
                 merupakan negara adikultur dengan berbagai macam budaya yang ada
-                di dalamnya.
+                di dalamnya. Pengenalan ini dapat dilakukan dengan menampilkan
+                video atau gambar terkait sehingga membuat visitor menjadi lebih
+                ingin mengunjungi lokasi wisata tersebut.
               </p>
-              <p>
-                Pengenalan ini dapat dilakukan dengan menampilkan video atau
-                gambar terkait sehingga membuat visitor menjadi lebih ingin
-                mengunjungi lokasi wisata tersebut.
-              </p>
+              <hr/>
             </Col>
 
             <Col>
-              <Card.Img style={{ width: "42rem" }} variant="top" src={Logo} />
+              <Card.Img style={{ width: "42rem", marginTop: "100px", marginRight: "-80px" }} variant="top" src={Logo} />
             </Col>
           </Row>
         </Row>
@@ -70,7 +69,7 @@ function About() {
             <img src={Luthfi} style={{ width: "45px" }} /> Luthfi Fitra Musyaffa
           </Col>
         </Row>
-
+        
         <h6
           style={{
             fontSize: "22px",

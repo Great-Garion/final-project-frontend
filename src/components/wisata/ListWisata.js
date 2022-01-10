@@ -12,12 +12,10 @@ function ListWisata() {
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const kabupaten = queryParams.get("kabupaten");
-  console.log(kabupaten);
 
   useEffect(() => {
     axios(`https://lokakota.herokuapp.com/wisata?kabupaten=${kabupaten}`).then(
       (result) => {
-        console.log(result.data);
         setListWisata(result.data);
       }
     );
@@ -34,6 +32,7 @@ function ListWisata() {
           {listWisata.map((item) => (
             <Col>
               <Card
+                className="cardWisata"
                 style={{
                   width: "16rem",
                   height: "18rem",

@@ -17,8 +17,9 @@
   text-align: center;
 }
 
-.login-box .user-box {
+.user-box {
   position: relative;
+  border: none;
 }
 
 .login-box .user-box input {

@@ -49,7 +49,7 @@ function Navbar() {
                 </li>
               </ul>
               <button className="masuk" onClick={logOut}>
-                {isLogin ? " LogOut" : " Login"}
+                {isLogin ? " Logout" : " Login"}
               </button>
             </header>
           </div>
