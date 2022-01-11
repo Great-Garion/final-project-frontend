@@ -88,7 +88,7 @@ function Detail() {
               <ul>
                 <li>
                   <b>
-                    <FaAddressBook /> Alamat :{" "}
+                    <FaAddressBook /> Address :{" "}
                   </b>{" "}
                   {dataDetail.address}
                 </li>
@@ -100,7 +100,7 @@ function Detail() {
                 </li>
                 <li>
                   <b>
-                    <FaClock /> Jam Buka :
+                    <FaClock /> Jam buka :
                   </b>
                   {dataDetail.waktu?.map((item) => (
                     <li>{item}</li>
@@ -153,7 +153,7 @@ function Detail() {
                   marginTop: "10px",
                 }}
               >
-                Restoran
+                Cafe & Resto
               </h6>
               <Row>
                 <Col className="cardDetail">
@@ -176,7 +176,7 @@ function Detail() {
                 }}
               >
                 {" "}
-                Transportasi
+                Transport
               </h6>
               <Row>
                 <Col className="cardDetail">
@@ -226,7 +226,7 @@ function Detail() {
                 }}
               >
                 {" "}
-                Polisi
+                Police
               </h6>
               <Row>
                 <Col className="cardDetail">
@@ -275,11 +275,12 @@ function Detail() {
             style={{
               backgroundColor: "green",
               marginTop: "70px",
-              marginLeft: "470px",
+              marginLeft: "460px",
               marginBottom: "50px",
+              width: "300px"
             }}
           >
-            Login agar dapat melihat review wisata
+            Login for review
           </Button>
         )}
       </div>
