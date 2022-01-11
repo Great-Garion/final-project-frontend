@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import Logo from "../images/Logo.png";
 import Auzan from "../images/auzan.png";
@@ -9,6 +10,8 @@ import Dellila from "../images/dellila.png";
 import Yeyen from "../images/yeyen.png";
 import Inayat from "../images/inayat.png";
 import Ardi from "../images/ardi.png";
+import Amman from "../images/amman.png";
+import Skilvul from "../images/skilvul.png";
 
 function About() {
   return (
@@ -17,28 +20,62 @@ function About() {
         <Row className="justify-content-md-center">
           <Row style={{ marginBottom: "3rem" }}>
             <Col style={{ marginTop: "4rem" }}>
-              <h6 style={{ fontSize: "35px", color: "rgb(55, 208, 255)"}}> About Us</h6>
+              <h6 style={{ fontSize: "35px", color: "rgb(55, 208, 255)" }}>
+                {" "}
+                About Us
+              </h6>
 
               <p style={{ textIndent: "45px" }}>
-                Lokakota tour menyediakan berbagai jenis media yang
-                dapat diaplikasikan untuk mendukung promosi dan pemberian
-                informasi penting tempat wisata yang berada di kabupaten sumbawa
-                dan sumbawa barat.
+                Lokakota tours menyediakan berbagai jenis media yang dapat
+                diaplikasikan untuk mendukung promosi dan pemberian informasi
+                penting terkait tempat wisata yang berada di Kabupaten Sumbawa
+                dan Sumbawa Barat. Website ini dapat bermanfaat secara
+                signifikan dalam mengenalkan tempat-tempat wisata, budaya, serta
+                tradisi di Kabupaten Sumbawa dan Sumbawa Barat.
               </p>
               <hr />
-              <p style={{ textIndent: "45px" }}>
-                Website ini dapat bermanfaat secara signifikan dalam mengenalkan
-                budaya serta tradisi setempat yang masih kental. Indonesia
-                merupakan negara adikultur dengan berbagai macam budaya yang ada
-                di dalamnya. Pengenalan ini dapat dilakukan dengan menampilkan
-                video atau gambar terkait sehingga membuat visitor menjadi lebih
-                ingin mengunjungi lokasi wisata tersebut.
+              <p>
+                Indonesia merupakan negara adikultur dengan berbagai macam
+                budaya yang ada di dalamnya. Pengenalan ini dapat dilakukan
+                dengan menampilkan video atau gambar terkait sehingga membuat
+                visitor menjadi lebih tertarik untuk mengunjungi lokasi-lokasi
+                wisata tersebut.
               </p>
-              <hr/>
+              <hr />
             </Col>
 
             <Col>
-              <Card.Img style={{ width: "42rem", marginTop: "100px", marginRight: "-80px" }} variant="top" src={Logo} />
+              <Card.Img
+                style={{
+                  width: "40rem",
+                  marginTop: "100px",
+                  marginRight: "-80px",
+                }}
+                variant="top"
+                src={Logo}
+              />
+              <Link
+                to={{ pathname: "https://www.amman.co.id" }}
+                target="_blank"
+              >
+                <Card.Img
+                  style={{
+                    width: "11rem",
+                    marginLeft: "20px",
+                  }}
+                  src={Amman}
+                />
+              </Link>
+              <Link to={{ pathname: "https://skilvul.com" }} target="_blank">
+                <Card.Img
+                  style={{
+                    width: "11rem",
+                    marginLeft: "20px",
+                    marginRight: "150px",
+                  }}
+                  src={Skilvul}
+                />
+              </Link>
             </Col>
           </Row>
         </Row>
@@ -69,7 +106,7 @@ function About() {
             <img src={Luthfi} style={{ width: "45px" }} /> Luthfi Fitra Musyaffa
           </Col>
         </Row>
-        
+
         <h6
           style={{
             fontSize: "22px",
