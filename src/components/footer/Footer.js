@@ -12,7 +12,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer>
+    <footer style={{ marginTop: "10px" }}>
       <Container className="container">
         <Row xs={1} md={4} className="row g-4">
           <div>

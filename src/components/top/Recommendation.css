@@ -1,0 +1,60 @@
+.topWisata {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 200px;
+}
+
+.cover::before {
+  position: relative;
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: 99;
+  height: 100%;
+  width: 150px;
+}
+
+.cover::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  z-index: 99;
+  height: 100%;
+  width: 150px;
+}
+.cover {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.scroll-images {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow: auto;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.child {
+  min-width: 400px;
+  height: 100%;
+  margin: 1px 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  overflow: hidden;
+}
+
+.scroll-images::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.child-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}

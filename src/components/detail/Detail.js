@@ -121,7 +121,7 @@ function Detail() {
       <br />
       <div style={{ width: "100%" }}>
         <Container>
-          <Row>
+          {/* <Row>
             <Col className="cardInfo">
               <h6
                 style={{
@@ -265,7 +265,7 @@ function Detail() {
                 </Col>
               </Row>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
         {isLogin ? (
           <Review />
@@ -277,7 +277,7 @@ function Detail() {
               marginTop: "70px",
               marginLeft: "460px",
               marginBottom: "50px",
-              width: "300px"
+              width: "300px",
             }}
           >
             Login for review
